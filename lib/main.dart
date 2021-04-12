@@ -19,7 +19,7 @@ class _ChartApp extends StatelessWidget {
 
 class _MyHomePage extends StatefulWidget {
   // ignore: prefer_const_constructors_in_immutables
-  _MyHomePage({Key key}) : super(key: key);
+  _MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -89,6 +89,6 @@ class _MyHomePageState extends State<_MyHomePage> {
 class ChartSampleData {
   ChartSampleData({this.x, this.y});
 
-  final String x;
-  final double y;
+  final String? x;
+  final double? y;
 }
