@@ -1,4 +1,4 @@
-# How to navigate to an external link using the callback events on performing user interactions in flutter charts?
+# How to navigate to a hyperlink when clicked on chart axis label (SfCartesianChart)?
 
 In Flutter Cartesian Chart widget, you can navigate to a hyperlink by clicking on the axis labels using the available callback event. A callback event is a callback function or method that you can pass as an argument to another function or method. It can perform an action whenever you require it. The callback event is used to navigate to a hyperlink when clicked on an axis label is the onAxisLabelTapped event, in which you can check the values and the content of the axis labels and launch the necessary hyperlinks accordingly.
 
