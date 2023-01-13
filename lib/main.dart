@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart' show launch;
+import 'package:url_launcher/url_launcher.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 void main() {
@@ -60,16 +60,16 @@ class _MyHomePageState extends State<_MyHomePage> {
                 onAxisLabelTapped: (args) {
                   if (args.axisName == 'primaryXAxis') {
                     if (args.value == 0) {
-                      launch(
+                      _launchUrl(
                           'https://www.emporis.com/buildings/388229/goldin-finance-117-tianjin-china');
                     } else if (args.value == 1) {
-                      launch(
+                      _launchUrl(
                           'https://www.emporis.com/buildings/1189351/ping-an-international-finance-center-shenzhen-china');
                     } else if (args.value == 2) {
-                      launch(
+                      _launchUrl(
                           'https://www.emporis.com/buildings/323473/shanghai-tower-shanghai-china');
                     } else if (args.value == 3) {
-                      launch(
+                      _launchUrl(
                           'https://www.emporis.com/buildings/182168/burj-khalifa-dubai-united-arab-emirates');
                     }
                   }
@@ -83,6 +83,13 @@ class _MyHomePageState extends State<_MyHomePage> {
                 ]),
           ),
         ));
+  }
+
+  Future<void> _launchUrl(String value) async {
+    var url = Uri.parse(value);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    }
   }
 }
 
