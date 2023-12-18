@@ -74,7 +74,7 @@ class _MyHomePageState extends State<_MyHomePage> {
                     }
                   }
                 },
-                series: <ChartSeries<ChartSampleData, String>>[
+                series: <ColumnSeries<ChartSampleData, String>>[
                   ColumnSeries<ChartSampleData, String>(
                     dataSource: _chartData,
                     xValueMapper: (ChartSampleData data, _) => data.x,
